@@ -1,0 +1,27 @@
+
+name: My First GitHub Actions Pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  learn:
+    name: Learn Pipeline Basics
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Welcome Message
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Check Linux Version
+        run: cat /etc/os-release
+
+      - name: Check Git Version
+        run: git --version
+
+      - name: Check Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
